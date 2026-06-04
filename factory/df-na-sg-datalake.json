@@ -1,0 +1,15 @@
+{
+	"name": "df-na-sg-datalake",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dfbc31b6-d77f-4afc-b6c5-2748fd4058e1",
+		"tenantId": "cc28633f-12b8-46cb-bc15-951dae239b4d"
+	}
+}
