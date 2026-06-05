@@ -18,7 +18,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "ventas_online_csv",
+						"referenceName": "ventas_sc_limpia_csv",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -122,19 +122,7 @@
 				"derivedColumn5 filter(cantidad>0 && !isNull(precio_unitario) && !isNull(fecha) && !isNull(cliente_email) && !isNull(metodo_pago) && !isNull(vendedor)) ~> filter1",
 				"filter1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          order_id as string,",
-				"          timestamp as string,",
-				"          product as string,",
-				"          qty as string,",
-				"          unit_price as string,",
-				"          customer as string,",
-				"          payment_method as string,",
-				"          status as string,",
-				"          shipping_cost as string,",
-				"          channel as string",
-				"     ),",
-				"     partitionFileNames:['ventas_onl_limpio.csv'],",
+				"     partitionFileNames:['ventas_online_limpio.csv'],",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
